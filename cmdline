@@ -1,0 +1,1 @@
+console=ttyAMA3,115200 androidboot.console=ttyAMA3 firmware_class.path=/system/vendor/firmware hisi_dma_print=0 vmalloc=384M maxcpus=8 coherent_pool=512K no_irq_affinity loglevel=7 androidboot.selinux=permissive enforcing=0 ate_enable=true
