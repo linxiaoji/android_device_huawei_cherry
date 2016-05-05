@@ -199,7 +199,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/cpu_thermal/normal_cpu_policy.xml:system/etc/normal_cpu_policy.xml \
 	$(LOCAL_PATH)/cpu_thermal/performance_cpu_policy.xml:system/etc/performance_cpu_policy.xml \
 	$(LOCAL_PATH)/cpu_thermal/powermonitor_config.xml:system/etc/powermonitor_config.xml \
-	$(LOCAL_PATH)/cpu_thermal/pwrpof.xml:system/etc/pwrprf.xml \
+	$(LOCAL_PATH)/cpu_thermal/pwrprof.xml:system/etc/pwrprof.xml \
 	$(LOCAL_PATH)/cpu_thermal/thermald.xml:system/etc/thermald.xml \
 	$(LOCAL_PATH)/cpu_thermal/thermald_performance.xml:system/etc/thermald_performance.xml
 

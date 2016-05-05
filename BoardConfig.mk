@@ -122,12 +122,12 @@ DEVICE_SCREEN_HEIGHT                        := 1280
 DEVICE_SCREEN_WIDTH                         := 720
 
 # TeamWin Recovery Project
-RECOVERY_VARIANT                            := twrp
-TW_THEME                                    := portrait_hdpi
-TW_BRIGHTNESS_PATH                          := "/sys/class/leds/lcd_backlight0/brightness"
-TW_CUSTOM_BATTERY_PATH                      := "/sys/devices/battery.0/power_supply/Battery"
-TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID      := true
-TW_MAX_BRIGHTNESS                           := 255
+#RECOVERY_VARIANT                            := twrp
+#TW_THEME                                    := portrait_hdpi
+#TW_BRIGHTNESS_PATH                          := "/sys/class/leds/lcd_backlight0/brightness"
+#TW_CUSTOM_BATTERY_PATH                      := "/sys/devices/battery.0/power_supply/Battery"
+#TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID      := true
+#TW_MAX_BRIGHTNESS                           := 255
 RECOVERY_GRAPHICS_USE_LINELENGTH            := true
 RECOVERY_SDCARD_ON_DATA                     := true
 BOARD_HAS_LARGE_FILESYSTEM                  := true
