@@ -1,3 +1,7 @@
+########################################################
+# Additional Build Properties for Huawei Honor 4C / 4X #
+########################################################
+
 dalvik.vm.heapsize=512m
 ro.opengles.version=131072
 debug.hwui.render_dirty_regions=false
@@ -19,14 +23,6 @@ ro.hwui.text_large_cache_width=2048
 ro.hwui.text_small_cache_height=1024
 ro.hwui.text_small_cache_width=1024
 ro.hwui.r_buffer_cache_size=8
-ro.sys.umsdirtyratio=2
-ro.config.hw_navigationbar=false
-persist.fw.force_adoptable=true
-ro.config.hw_music_lp=true
-ro.magic.api.version=0.1
-keyguard.no_require_sim=true
-bastet.service.enable=true
-ro.config.hw_emerg=on
 ro.bt.bdaddr_path=/data/misc/bluedroid/macbt
 persist.sys.jankenable=true
 ro.product.platform=hi6210sft

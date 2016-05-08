@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # Defining Local Path
-LOCAL_PATH := device/huawei/hi6210sft
+LOCAL_PATH := device/huawei/cherry
 
 # Adjust the dalvik heap to be appropriate for a phone
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -26,7 +26,7 @@ PRODUCT_COPY_FILES += $(call add-to-product-copy-files-if-exists,\
         $(LOCAL_PATH)/preboot/ons.bin:system/ons.bin)
 
 # Set custom settings
-DEVICE_PACKAGE_OVERLAYS := device/huawei/hi6210sft/overlay
+DEVICE_PACKAGE_OVERLAYS := device/huawei/cherry/overlay
 
 # Add openssh support for remote debugging and job submission
 PRODUCT_PACKAGES += ssh sftp scp sshd ssh-keygen sshd_config start-ssh uim wpa_supplicant
@@ -50,7 +50,7 @@ PRODUCT_PACKAGES += libion
 PRODUCT_PACKAGES += gatord
 
 # Build gralloc for Juno
-PRODUCT_PACKAGES += gralloc.hi6210sft gralloc.default
+PRODUCT_PACKAGES += gralloc.hi6210sft
 
 # Include ION tests
 PRODUCT_PACKAGES += \
@@ -168,7 +168,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/ramdisk/sbin/emmc_partation:root/sbin/emmc_partation \
-	$(LOCAL_PATH)/ramdisk/sbin/hdbd:root/sbin/hdbd \
 	$(LOCAL_PATH)/ramdisk/sbin/logctl_service:root/sbin/logctl_service \
 	$(LOCAL_PATH)/ramdisk/sbin/oeminfo_nvm_server:root/sbin/oeminfo_nvm_server \
 	$(LOCAL_PATH)/ramdisk/sbin/teecd:root/sbin/teecd
@@ -182,7 +181,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.boot.selinux=0
 ADDITIONAL_DEFAULT_PROPERTIES      += ro.boot.selinux=0
 
 # Inherit from Non Opensource Blobs
-$(call inherit-product, vendor/huawei/hi6210sft/vendor.mk)
+$(call inherit-product, vendor/huawei/cherry/vendor.mk)
 
 # Copy Audio Policies and Configurations
 PRODUCT_COPY_FILES += \
@@ -207,3 +206,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml \
 	$(LOCAL_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml
+
+# Copy Prebuilt Kernel (will be overwritten on compilation)
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/prebuilt/kernel:kernel

@@ -59,7 +59,7 @@ TARGET_USES_HISI_DTIMAGE                    := true
 
 # Graphics and Hardware Acceleration
 ANDROID_ENABLE_RENDERSCRIPT                 := true
-BOARD_EGL_CFG                               := device/huawei/hi6210sft/egl.cfg
+BOARD_EGL_CFG                               := device/huawei/cherry/egl.cfg
 TARGET_HARDWARE_3D                          := true
 USE_OPENGL_RENDERER                         := true
 
@@ -76,12 +76,10 @@ WIFI_DRIVER_FW_PATH_STA                     := "/system/vendor/firmware/fw_bcm43
 WIFI_DRIVER_FW_PATH_AP                      := "/system/vendor/firmware/fw_bcm4343s_apsta_hw.bin"
 WIFI_DRIVER_FW_PATH_P2P                     := "/system/vendor/firmware/fw_bcm4343s_p2p_hw.bin"
 WIFI_BAND                                   := 802_11_ABG
-CONFIG_DRIVER_NL80211                       := y
-CONFIG_DRIVER_WEXT                          := y
 
 # Bluetooth
-BOARD_BLUEDROID_VENDOR_CONF                 := device/huawei/hi6210sft/bluetooth/vnd_h60.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/hi6210sft/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF                 := device/huawei/cherry/bluetooth/vnd_h60.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/cherry/bluetooth
 BOARD_HAVE_BLUETOOTH                        := true
 BOARD_HAVE_BLUETOOTH_BCM                    := true
 
@@ -102,7 +100,7 @@ BOARD_TAGS_OFFSET                           := 0x02988000
 BUILD_KERNEL_MODULES                         = true
 
 # Kernel (Fallback): Uncomment the line if the sources are not present or a prebuilt kernel is to be used.
-#TARGET_KERNEL_PREBUILT := device/huawei/hi6210sft/kernel
+TARGET_KERNEL_PREBUILT := device/huawei/cherry/prebuilt/kernel
 
 # Camera
 USE_CAMERA_STUB                             := true
@@ -134,7 +132,7 @@ BOARD_HAS_LARGE_FILESYSTEM                  := true
 BOARD_RECOVERY_NEEDS_FBIOPAN_DISPLAY        := true
 
 # Board RIL
-BOARD_RIL_CLASS                             := ../../../device/huawei/hi6210sft/ril
+BOARD_RIL_CLASS                             := ../../../device/huawei/cherry/ril
 
 # Boot animation
 TARGET_BOOTANIMATION_PRELOAD                := true
@@ -153,7 +151,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Security Enhanced Linux
-BOARD_SEPOLICY_DIRS                         := device/huawei/hi6210sft/sepolicy
+BOARD_SEPOLICY_DIRS                         := device/huawei/cherry/sepolicy
 BOARD_SEPOLICY_UNION += \
         file_contexts \
         installd.de
