@@ -152,9 +152,6 @@ endif
 
 # Security Enhanced Linux
 BOARD_SEPOLICY_DIRS                         := device/huawei/cherry/sepolicy
-BOARD_SEPOLICY_UNION += \
-        file_contexts \
-        installd.de
 
 # CPUSETS Feature
 ENABLE_CPUSETS                              := true
