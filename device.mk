@@ -210,3 +210,9 @@ PRODUCT_COPY_FILES += \
 # Copy Prebuilt Kernel (will be overwritten on compilation)
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/prebuilt/kernel:kernel
+
+# Security Enhanced Linux Policy Prebuilt
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/prebuilt/sepolicy/file_contexts:root/file_contexts \
+	$(LOCAL_PATH)/prebuilt/sepolicy/property_contexts:root/property_contexts \
+	$(LOCAL_PATH)/prebuilt/sepolicy/service_contexts:root/service_contexts

@@ -150,9 +150,6 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
-# Security Enhanced Linux
-BOARD_SEPOLICY_DIRS                         := device/huawei/cherry/sepolicy
-
 # CPUSETS Feature
 ENABLE_CPUSETS                              := true
 
