@@ -93,11 +93,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.interface=wlan0 \
         wifi.supplicant_scan_interval=15
 PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/bt-wifi-firmware-util/TIInit_11.8.32.bts:system/etc/firmware/TIInit_11.8.32.bts \
-        $(LOCAL_PATH)/bt-wifi-firmware-util/wl18xx-fw-4.bin:system/etc/firmware/ti-connectivity/wl18xx-fw-4.bin \
         $(LOCAL_PATH)/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-        $(LOCAL_PATH)/bt-wifi-firmware-util/TIInit_11.8.32.bts:system/etc/firmware/ti-connectivity/TIInit_11.8.32.bts
-
+        
 # Permissions 
 PRODUCT_COPY_FILES += $(call add-to-product-copy-files-if-exists,\
         frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
@@ -120,8 +117,8 @@ PRODUCT_COPY_FILES += $(call add-to-product-copy-files-if-exists,\
         frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
         packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml)
 
-# Include BT modules
-$(call inherit-product-if-exists, hardware/ti/wpan/ti-wpan-products.mk)
+# BCM4343 Wlan Modules
+$(call inherit-product, hardware/broadcom/wlan/bcmdhd/firmware/bcm4343/device-bcm.mk)
 
 # Camera
 PRODUCT_PACKAGES += camera.hi6210sft camera.default
@@ -136,10 +133,10 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
 	audioril.lib=libhuawei-audio-ril.so \
-	ro.telephony.ril_class=HuaweiRIL \
-	ro.telephony.default_network=9 \
-	telephony.lteOnCdmaDevice=0 \
-	telephony.lteOnGsmDevice=0
+	ro.telephony.ril_class=HwHisiRIL \
+	ro.telephony.default_network=9,9 \
+	telephony.lteOnCdmaDevice=0,0 \
+	telephony.lteOnGsmDevice=0,0
 
 # Additional packages
 PRODUCT_PACKAGES += \

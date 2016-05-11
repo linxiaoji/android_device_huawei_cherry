@@ -80,7 +80,6 @@ WIFI_BAND                                   := 802_11_ABG
 # Bluetooth
 BOARD_BLUEDROID_VENDOR_CONF                 := device/huawei/cherry/bluetooth/vnd_h60.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/cherry/bluetooth
-BOARD_HAVE_BLUETOOTH                        := true
 BOARD_HAVE_BLUETOOTH_BCM                    := true
 
 # Kernel

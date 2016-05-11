@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright 2013 The Android Open Source Project
  * Copyright 2015 The CyanogenMod Project
  *
@@ -317,7 +317,7 @@ struct hw_module_t HAL_MODULE_INFO_SYM = {
     .version_major = 1,
     .version_minor = 0,
     .id = LIGHTS_HARDWARE_MODULE_ID,
-    .name = "Honor6 lights Module",
+    .name = "Honor4 lights Module",
     .author = "The CyanogenMod Project",
     .methods = &lights_module_methods,
 };
