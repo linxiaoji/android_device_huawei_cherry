@@ -163,7 +163,6 @@
 /system/bin/pppd	u:object_r:ppp_exec:s0
 /system/bin/tf_daemon	u:object_r:tee_exec:s0
 /system/bin/racoon	u:object_r:racoon_exec:s0
-/system/xbin/su		u:object_r:su_exec:s0
 /system/xbin/procrank   u:object_r:procrank_exec:s0
 /system/xbin/perfprofd  u:object_r:perfprofd_exec:s0
 /system/xbin/simpleperf u:object_r:system_file:s0
@@ -463,65 +462,32 @@
 #############################
 # System files
 #
-/system/bin/HwCamCfgSvr		u:object_r:hwcamcfgsvr_exec:s0
-/system/bin/himreg		u:object_r:himreg_exec:s0
-/system/bin/device_monitor	u:object_r:device_monitor_exec:s0
-/system/bin/goldeneye		u:object_r:goldeneye_exec:s0
 /data/hw_init/system/bin/goldeneye		u:object_r:goldeneye_exec:s0
 /system/bin/logserver		u:object_r:logserver_exec:s0
-/data/hw_init/system/bin/logserver		u:object_r:logserver_exec:s0
-/system/bin/hiscoutmanager  u:object_r:hiscoutmanager_exec:s0
-/system/bin/dumptool		u:object_r:logserver_exec:s0
 /system/bin/chargelogcat	u:object_r:logcat_exec:s0
-/system/bin/chargemonitor	u:object_r:logcat_exec:s0
 /system/bin/sleeplogcat		u:object_r:logcat_exec:s0
 /system/bin/factory_log_service	u:object_r:logcat_exec:s0
 /system/bin/powerlogd		u:object_r:powerlogd_exec:s0
 /system/bin/mac_addr_normalization	u:object_r:mac_addr_normalization_exec:s0
 /system/bin/wifiwakeupsrc	u:object_r:wifiwakeupsrc_exec:s0
-/system/bin/hw_ueventd		u:object_r:hw_ueventd_exec:s0
 /system/bin/atcmdserver		u:object_r:atcmdserver_exec:s0
-# DTS2015051508182 z00284161 2015/05/15 Add HiLOGE feature start.
-/system/bin/hilogcat u:object_r:logcat_exec:s0
-# DTS2015051508182 z00284161 2015/05/15 Add HiLOGE feature end.
-/system/bin/isplogcat u:object_r:logcat_exec:s0
 /system/bin/tlogcat             u:object_r:logcat_exec:s0
 /system/bin/modemlogcat_lte	u:object_r:modemlogcat_lte_exec:s0
-/system/bin/modemlogcat_via	u:object_r:modemlogcat_via_exec:s0
 /system/bin/thermal-daemon	u:object_r:thermal-daemon_exec:s0
-/system/bin/tempmonitor		u:object_r:tempmonitor_exec:s0
-/system/bin/mappersh		u:object_r:mapper_exec:s0
-/system/bin/hw_cdmamodem_service	u:object_r:hw_cdma_exec:s0
-/system/bin/preparesd.sh	u:object_r:preparesd_exec:s0
-/system/bin/eventcat		u:object_r:logcat_exec:s0
 /system/bin/secure_storage	u:object_r:secure_storage_exec:s0
-
 /system/bin/diagserver		u:object_r:diagserver_exec:s0
 /system/bin/hwnffserver		u:object_r:hwnffserver_exec:s0
-/system/bin/check_longpress	u:object_r:check_longpress_exec:s0
 /system/bin/jankservice		u:object_r:jankservice_exec:s0
 /system/bin/hwpged		u:object_r:hwpged_exec:s0
-/system/bin/statusd       u:object_r:statusd_exec:s0
+
 
 # gps
 /system/bin/gpsdaemon		u:object_r:gpsdaemon_exec:s0
-/system/bin/glgps47531		u:object_r:gpsd_exec:s0
-/system/bin/glgps47531cl	u:object_r:gpsd_exec:s0
-/system/bin/glgps4752		u:object_r:gpsd_exec:s0
-/system/bin/glgps4752cl         u:object_r:gpsd_exec:s0
-/system/bin/gps4752logd		u:object_r:gpslogd_exec:s0
 /system/bin/gpslogd		u:object_r:gpslogd_exec:s0
-/system/bin/glgps4774		u:object_r:gpsd_exec:s0
-/system/bin/glgps4774cl		u:object_r:gpsd_exec:s0
-/system/bin/lhd4774		u:object_r:gpsd_exec:s0
-/system/bin/lhd4774cl		u:object_r:gpsd_exec:s0
 
-# bastet daemon
-/system/bin/bastetd		u:object_r:bastetd_exec:s0
 
 # for zygote link file
 /system/bin/app_process                         u:object_r:zygote_exec:s0
-/system/bin/perfhub     u:object_r:perfhub_exec:s0
 
 /system/bin/data_cleaner       u:object_r:data_cleaner_exec:s0
 

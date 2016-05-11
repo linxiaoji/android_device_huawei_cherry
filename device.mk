@@ -178,7 +178,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.boot.selinux=0
 ADDITIONAL_DEFAULT_PROPERTIES      += ro.boot.selinux=0
 
 # Inherit from Non Opensource Blobs
-$(call inherit-product, vendor/huawei/cherry/vendor.mk)
+#$(call inherit-product, vendor/huawei/cherry/vendor.mk)
 
 # Copy Audio Policies and Configurations
 PRODUCT_COPY_FILES += \
@@ -213,3 +213,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/prebuilt/sepolicy/file_contexts:root/file_contexts \
 	$(LOCAL_PATH)/prebuilt/sepolicy/property_contexts:root/property_contexts \
 	$(LOCAL_PATH)/prebuilt/sepolicy/service_contexts:root/service_contexts
+
+# Get the long list of APNs
+PRODUCT_COPY_FILES := device/huawei/cherry/apns-conf.xml:system/etc/apns-conf.xml
