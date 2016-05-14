@@ -214,5 +214,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/prebuilt/sepolicy/property_contexts:root/property_contexts \
 	$(LOCAL_PATH)/prebuilt/sepolicy/service_contexts:root/service_contexts
 
+# Asahi Kasei Microdevices AKM 09911 Compass
+PRODUCT_PACKAGES += \
+    calmodule.cfg \
+    libcalmodule_common
+
 # Get the long list of APNs
 PRODUCT_COPY_FILES := device/huawei/cherry/apns-conf.xml:system/etc/apns-conf.xml
