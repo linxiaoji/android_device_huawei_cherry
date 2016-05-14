@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 **
-** Copyright 2016, The Android Open Source Project
+** Copyright 2009, The Android Open Source Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License")
 ** you may not use this file except in compliance with the License.
@@ -19,58 +19,42 @@
 <device name="Android">
   <!-- All values are in mA except as noted -->
   <item name="none">0</item>
-  <item name="screen.on">139</item> <!-- min brite -->
+  <item name="screen.on">85</item> <!-- min brite -->
   <item name="bluetooth.active">116</item>
   <item name="bluetooth.on">2.8</item>
   <item name="bluetooth.at">2.8</item> <!-- TBD -->
-  <item name="screen.full">380</item> <!-- backlight 14 leds -->
+  <item name="screen.full">170</item> <!-- 360 max on calendar -->
   <item name="wifi.on">0.06</item>
   <item name="wifi.active">97</item>
   <item name="wifi.scan">100</item>
-  <item name="dsp.audio">60</item> <!-- k3v3 -->
-  <item name="dsp.video">122</item>
-  <item name="radio.active">177</item>
-  <item name="gps.on">1.6</item>
-  <item name="battery.capacity">2600</item> <!-- 4000mAh -->
-  <item name="radio.scanning">302</item> <!-- TBD -->
+  <item name="dsp.audio">53</item>
+  <item name="dsp.video">70</item>
+  <item name="radio.active">160</item>
+  <item name="gps.on">60</item>
+  <item name="battery.capacity">2500</item>
+  <item name="radio.scanning">35</item> <!-- TBD -->
   <!-- Current consumed by the radio at different signal strengths, when paging  -->
    <array name="radio.on"> <!-- 1 entry per signal strength bin, TBD -->
-      <value>65.0</value>
-      <value>10.0</value>
+      <value>15</value>
+      <value>7.4</value>
   </array>
   <array name="cpu.speeds">
-    <value>403200</value> <!-- 400 MHz CPU speed -->
-    <value>604800</value> <!-- 600 MHz CPU speed -->
-    <value>806400</value> <!-- 800 MHz CPU speed -->
-    <value>1017600</value><!-- 1.0 GHz CPU speed -->
-    <value>1209600</value><!-- 1.2 GHz CPU speed -->
-    <value>1305600</value><!-- 1.3 GHz CPU speed -->
-    <value>1401600</value><!-- 1.4 GHz CPU speed -->
-    <value>1516800</value><!-- 1.5 GHz CPU speed -->
-    <value>1612800</value><!-- 1.6 GHz CPU speed -->
-    <value>1708800</value><!-- 1.7 GHz CPU speed -->
-    <value>1804800</value><!-- 1.8 GHz CPU speed -->
-    <value>2016000</value><!-- 2.1 GHz CPU speed -->
-    
+      <value>208000</value> <!-- 400 MHz CPU speed -->
+      <value>432000</value>
+      <value>729000</value>
+      <value>960000</value>
+      <value>1200000</value>
   </array>
   <!-- Power consumption in suspend -->
-  <item name="cpu.idle">3</item> <!-- k3v3 -->
+  <item name="cpu.idle">2.2</item>
   <!-- Power consumption due to wake lock held -->
-  <item name="cpu.awake">50</item> <!-- k3v3 -->
+  <item name="cpu.awake">45</item>
   <!-- Power consumption at different speeds -->
   <array name="cpu.active">
-      <value>105</value>
-      <value>190</value>
-      <value>280</value>
-      <value>395</value>
-      <value>510</value>
-      <value>610</value>
-      <value>740</value>
-      <value>870</value>
-      <value>995</value>
-      <value>1105</value>
-      <value>1335</value>
-      <value>1655</value>
-      
+      <value>131</value>
+      <value>163</value>
+      <value>194</value>
+      <value>236</value>
+      <value>322</value>
   </array>
 </device>

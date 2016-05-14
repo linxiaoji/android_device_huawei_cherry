@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<!-- Version History
+        version 1 - initial version.
+        version 2 - added recipientLimit.
+        version 3 - added min/max recycler values.
+        version 4 - added sms to mms text threshold.
+-->
+<mms_config version="4"> 
+  <string name="prefPlaymode">slideshowactivity</string>  
+  <bool name="modifySMSCenterNumber">true</bool>  
+  <bool name="enableSendingBlankSMS">true</bool>  
+  <bool name="enableShortPhoneNumberLink">true</bool>  
+  <bool name="creationModeEnabled">true</bool>  
+  <bool name="enableReplyAll">true</bool>  
+  <bool name="isChangeClassZeroMessageShow">true</bool>  
+  <bool name="enabledMMS">true</bool>
+  <int name="maxMessageSize">307200</int>
+  <int name="maxImageHeight">480</int>
+  <int name="maxImageWidth">640</int>
+  <int name="defaultSMSMessagesPerThread">500</int>
+  <int name="defaultMMSMessagesPerThread">50</int>
+  <int name="minMessageCountPerThread">10</int>
+  <int name="maxMessageCountPerThread">5000</int>
+  <string name="uaProfUrl">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
+  <int name="recipientLimit">100</int>
+  <int name="smsToMmsTextThreshold">11</int>
+  <int name="WAPPushSupported">1</int>
+  <bool name="enableMultipartSMS">false</bool>
+  <bool name="enableOptionalRingtone">true</bool>
+  <bool name="enableSlideDuration">true</bool>
+  <bool name="enableStrictAddrCharSet">false</bool>
+  <bool name="enableMmsVcard">true</bool>
+  <int name="maxMessageTextSize">-1</int>
+  <int name="mmsDownloadAvailableSpaceLimit">1048576</int>
+  <bool name="enableMmsDRInRussia">true</bool>
+  <bool name="enableMergeForward">true</bool>
+  <bool name="enableMemoryStatus">false</bool>
+  <bool name="enableFolderMode">false</bool>
+  <bool name="enableSaveMode">true</bool>
+  <bool name="enableSubjectEditorByteFilter">true</bool>
+  <bool name="enableWapSenderAddress">true</bool>
+  <bool name="defaultSMSDeliveryReports">false</bool>
+  <bool name="defaultMMSDeliveryReports">false</bool>
+  <bool name="mmsReadReportChecked">false</bool>
+  <bool name="enableSMSCenterNumber">true</bool>
+  <bool name="enableSendMMSDeliveryReports">true</bool>
+  <bool name="enableSendMMSReadReports">true</bool>
+  <bool name="enableMmsCustomizedUA">true</bool>
+  <string name="userAgent">CHERRY/Android-Mms/2.0</string>
+  <int name="maxSlides">20</int>
+  <bool name="enableSelectAndCopyText">true</bool>
+  <int name="httpSocketTimeout">120000</int>
+  <bool name="isShowAttachmentSize">true</bool>
+  <bool name="enableSlideshowforsinglemedia">true</bool>
+  <bool name="enableMmsExpiryWhthMax">true</bool>
+  <bool name="enableSmartAchive">false</bool>
+</mms_config>
