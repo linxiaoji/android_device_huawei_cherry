@@ -20,7 +20,7 @@ LOCAL_PATH := device/huawei/cherry
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Copy preboot binaries
-PRE_BOOT_FILES := isp.bin ons.bin
+PRE_BOOT_FILES := isp.bin
 PRODUCT_COPY_FILES += $(call add-to-product-copy-files-if-exists,\
         $(LOCAL_PATH)/preboot/isp.bin:system/isp.bin \
         $(LOCAL_PATH)/preboot/ons.bin:system/ons.bin)
@@ -221,3 +221,9 @@ PRODUCT_PACKAGES += \
 
 # Get the long list of APNs
 PRODUCT_COPY_FILES := device/huawei/cherry/apns-conf.xml:system/etc/apns-conf.xml
+
+# Dynamic Host Configuration Protocol Client
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
+	$(LOCAL_PATH)/dhcpcd/dhcpcd-hooks/20-dns.conf:system/etc/dhcpcd/dhcpcd/20-dns.conf \
+	$(LOCAL_PATH)/dhcpcd/dhcpcd-hooks/95-configured:system/etc/dhcpcd/dhcpcd/95-configured

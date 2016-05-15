@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/huawei/cherry/device.mk)
 
 PRODUCT_DEVICE := cherry
-PRODUCT_NAME := aosp_cherry
+PRODUCT_NAME := cherry
 PRODUCT_BRAND := honor
-PRODUCT_MODEL := cherry
+PRODUCT_MODEL := CHM-U01
 PRODUCT_MANUFACTURER := HUAWEI

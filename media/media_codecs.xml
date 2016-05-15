@@ -80,14 +80,10 @@ Only the three quirks included above are recognized at this point:
     <Include href="media_codecs_google_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
 
-    <Settings>
-    <Setting name="max-video-encoder-input-buffers" value="5" />
-    </Settings>
-
     <Encoders>
         <MediaCodec name="OMX.k3.video.encoder.avc" type="video/avc">
-        <Limit name="size" min="176x144" max="1920x1088" />
-        <Limit name="alignment" value="16x16" />
+		<Limit name="size" min="176x144" max="1920x1088" />
+		<Limit name="alignment" value="16x16" />
         <Limit name="block-size" value="16x16" />
         </MediaCodec>
     </Encoders>
@@ -96,80 +92,78 @@ Only the three quirks included above are recognized at this point:
         <MediaCodec name="OMX.k3.video.decoder.avc" type="video/avc">
             <Limit name="size" min="64x64" max="1920x1088" />
             <Quirk name="requires-allocate-on-input-ports" />
-            <Limit name="concurrent-instances" max="4" />
-            <Feature name="adaptive-playback" />
+			<Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="OMX.k3.video.decoder.mpeg2" >
             <Type name="video/mpeg"  >
-                <Limit name="size" min="64x64" max="1920x1088" />
-                <Limit name="concurrent-instances" max="4" />
-            </Type>
+				<Limit name="size" min="64x64" max="1920x1088" />
+			</Type>
             <Type name="video/mpeg2"  >
-                <Limit name="size" min="64x64" max="1920x1088" />
-                <Limit name="concurrent-instances" max="4" />
-            </Type>
-            <Quirk name="requires-allocate-on-input-ports" />
-            <Limit name="size" min="64x64" max="1920x1088" />
-            <Feature name="adaptive-playback" />
+				<Limit name="size" min="64x64" max="1920x1088" />
+			</Type>
+	        <Quirk name="requires-allocate-on-input-ports" />
+			<Limit name="size" min="64x64" max="1920x1088" />
+			<Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="OMX.k3.video.decoder.mpeg4" >
             <Type name="video/mpeg4" >
-                <Limit name="size" min="64x64" max="1920x1088" />
-                <Limit name="concurrent-instances" max="4" />
-            </Type>
+				<Limit name="size" min="64x64" max="1920x1088" />
+			</Type>
             <Type name="video/mp4v-es"  >
-                <Limit name="size" min="64x64" max="1920x1088" />
-                <Limit name="concurrent-instances" max="4" />
-            </Type>
+				<Limit name="size" min="64x64" max="1920x1088" />
+			</Type>
             <Type name="video/mp4"  >
-                <Limit name="size" min="64x64" max="1920x1088" />
-                <Limit name="concurrent-instances" max="4" />
-            </Type>
+				<Limit name="size" min="64x64" max="1920x1088" />
+			</Type>
             <Type name="video/x-flv" >
-                <Limit name="size" min="64x64" max="1920x1088" />
-                <Limit name="concurrent-instances" max="4" />
-            </Type>
+				<Limit name="size" min="64x64" max="1920x1088" />
+			</Type>
             <Type name="video/3gpp" >
-                <Limit name="size" min="64x64" max="1920x1088" />
-                <Limit name="concurrent-instances" max="4" />
-            </Type>
-            <Quirk name="requires-allocate-on-input-ports" />
-            <Limit name="concurrent-instances" max="4" />
-            <Feature name="adaptive-playback" />
+				<Limit name="size" min="64x64" max="1920x1088" />
+			</Type>
+	        <Quirk name="requires-allocate-on-input-ports" />
+			<Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="OMX.k3.video.decoder.vc1" >
             <Type name="video/x-ms-wmv"  >
-                <Limit name="size" min="64x64" max="1920x1088" />
-                <Limit name="concurrent-instances" max="4" />
-            </Type>
+				<Limit name="size" min="64x64" max="1920x1088" />
+			</Type>
             <Type name="video/x-ms-wmv3"  >
-                <Limit name="size" min="64x64" max="1920x1088" />
-                <Limit name="concurrent-instances" max="4" />
-            </Type>
+				<Limit name="size" min="64x64" max="1920x1088" />
+			</Type>
             <Type name="video/vc1"  >
-                <Limit name="size" min="64x64" max="1920x1088" />
-                <Limit name="concurrent-instances" max="4" />
-            </Type>
+				<Limit name="size" min="64x64" max="1920x1088" />
+			</Type>
             <Type name="video/wvc1"  >
-                <Limit name="size" min="64x64" max="1920x1088" />
-                <Limit name="concurrent-instances" max="4" />
-            </Type>
-            <Quirk name="requires-allocate-on-input-ports" />
-            <Limit name="size" min="64x64" max="1920x1088" />
-            <Feature name="adaptive-playback" />
+				<Limit name="size" min="64x64" max="1920x1088" />
+			</Type>
+	        <Quirk name="requires-allocate-on-input-ports" />
+			<Limit name="size" min="64x64" max="1920x1088" />
+			<Feature name="adaptive-playback" />
         </MediaCodec>	
         <MediaCodec name="OMX.k3.video.decoder.vp8" type="video/x-vnd.on2.vp8">
-            <Limit name="size" min="64x64" max="1920x1088" />
+				<Limit name="size" min="64x64" max="1920x1088" />
             <Quirk name="requires-allocate-on-input-ports" />
-            <Limit name="concurrent-instances" max="4" />
-            <Feature name="adaptive-playback" />
+			<Feature name="adaptive-playback" />
         </MediaCodec>
-        <MediaCodec name="OMX.k3.video.decoder.rv" type="video/x-pn-realvideo">
-            <Quirk name="requires-allocate-on-input-ports" />
-            <Limit name="size" min="64x64" max="1920x1088" />
-            <Limit name="concurrent-instances" max="4" />
-            <Feature name="adaptive-playback" />
+
+    <!--DTS2014072304853 @l00206966 2017-07-16 begin -->
+		<!--<MediaCodec name="OMX.vpu.video_decoder.rv" type="video/vnd.rn-realvideo">
+			<Quirk name="requires-allocate-on-input-ports" />
+        </MediaCodec>-->
+    <!--DTS2014072304853 @l00206966 2017-07-16 begin -->
+		<MediaCodec name="OMX.k3.video.decoder.rv" type="video/x-pn-realvideo">
+			<Quirk name="requires-allocate-on-input-ports" />
+			<Limit name="size" min="64x64" max="1920x1088" />
+			<Feature name="adaptive-playback" />
         </MediaCodec>
+
+        <MediaCodec name="OMX.ffmpeg.video.decoder" type="video/ffmpeg">
+        </MediaCodec>
+
+        <!--DTS2014071104129 @l00206966 2017-07-16 begin -->
+        <MediaCodec name="OMX.ffmpeg.audio.decoder" type="audio/ffmpeg" />
+        <!--DTS2014071104129 @l00206966 2017-07-16 end -->
 
     </Decoders>
 
