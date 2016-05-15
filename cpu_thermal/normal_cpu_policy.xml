@@ -158,7 +158,7 @@
     <cpu_maxprofile>960000</cpu_maxprofile>
     <gpu_maxprofile>250000000</gpu_maxprofile>
   </scenemode>
-  <scenemode name="com.Tianma.QiJi.*|com.vectorunit.red|com.vectorunit.bluesoco|com.kiloo.subwaysurf"
+  <scenemode name="com.*qmqj.*|com.Tianma.QiJi.*|com.vectorunit.red|com.vectorunit.bluesoco|com.kiloo.subwaysurf"
              id="10017">
     <cpu_maxprofile>960000</cpu_maxprofile>
     <gpu_maxprofile>400000000</gpu_maxprofile>

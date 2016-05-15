@@ -78,25 +78,23 @@ WIFI_DRIVER_FW_PATH_P2P                     := "/system/vendor/firmware/fw_bcm43
 WIFI_BAND                                   := 802_11_ABG
 
 # Bluetooth
-BOARD_BLUEDROID_VENDOR_CONF                 := device/huawei/cherry/bluetooth/vnd_h60.txt
+BOARD_BLUEDROID_VENDOR_CONF                 := device/huawei/cherry/bluetooth/bt_vendor.conf
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/cherry/bluetooth
 BOARD_HAVE_BLUETOOTH_BCM                    := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE                        := hhisi_dma_print=0 vmalloc=384M maxcpus=8 coherent_pool=512K no_irq_affinity androidboot.selinux=permissive ate_enable=true iommu_ddr_size=0x80000000 mem=1932M boardid=0x48696220,0x00000011,0x000002e9 productid=0x3d350500 pmu_nv_addr=0x070c49b0 low_volt_flag=0 iommu_enable boottype=pknormal enter_recovery=0 otg.status=enable normal_reset_type=press1s himntn=00011100000000000000000000001000 LCD_TYPE=TM_NT35521_LCD density=320 setup_logctl=0 loglevel=5 bitmapofabnrst=0x00000008  boot_slice=0x0001eff1 no_uart_console mdmlogbase=0x00000000 mdmlogsize=0x00000000 mdmlogtime=0x00000000 async_loadmodem efuse_status=0 recovery_update=0 fblock=unlocked androidboot.hardware=hi6210sft
+BOARD_KERNEL_CMDLINE                        := hisi_dma_print=0 vmalloc=384M maxcpus=8 coherent_pool=512K no_irq_affinity androidboot.selinux=permissive ate_enable=true mem=1932M density=320 androidboot.hardware=hi6210sft
 BOARD_KERNEL_BASE                           := 0x07478000
 TARGET_KERNEL_SOURCE                        := kernel/
 TARGET_KERNEL_ARCH                          := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX          := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH                   := arm64
-TARGET_KERNEL_CONFIG                        := cyanogenmod_hi6210sft_defconfig
+TARGET_KERNEL_CONFIG                        := hisi_hi6210sft_defconfig
 TARGET_USES_UNCOMPRESSED_KERNEL             := true
 BOARD_KERNEL_IMAGE_NAME                     := Image
 BOARD_KERNEL_PAGESIZE                       := 2048
-BOARD_RAMDISK_OFFSET                        := 0x07b88000
-BOARD_KERNEL_OFFSET                         := 0x00008000
-BOARD_TAGS_OFFSET                           := 0x02988000
 BUILD_KERNEL_MODULES                         = true
+BOARD_MKBOOTIMG_ARGS                        := --kernel_offset 0x00008000 --ramdisk_offset 0x07b88000 --tags_offset 0x02988000
 
 # Kernel (Fallback): Uncomment the line if the sources are not present or a prebuilt kernel is to be used.
 TARGET_KERNEL_PREBUILT := device/huawei/cherry/prebuilt/kernel

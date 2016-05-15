@@ -5,10 +5,9 @@
        PortName="/dev/ttyAMA2"
        BaudRate="921600"
        AtCmdTransportPort="/dev/appvcom9"
-
        LogEnabled="false"
-       Log="FILE"
-       LogDirectory="/sdcard/gps/log"
+       Log="JAVA"
+       LogDirectory="/data/hwzd_logs/gps_log"
        GpslogdPipePath="/data/gps/.gpslogd.pipe"
 
        GpioNStdbyPath="/proc/gps/nstandby"
@@ -38,8 +37,9 @@
        SuplSslVerify="none"
        SuplTlsCertPath="/data/cust/xml/server.pem"
        SuplTlsStopForInvPath="false"
+
        SuplLogEnable="false"
-       SuplLogFullName="/data/gps/log/supllog.txt"
+       SuplLogFullName="/sdcard/gps/log/supllog.txt"
        WakeLock="geo"
        HttpSyncLto="true"
        LtoFileName="lto2.dat"
@@ -49,14 +49,15 @@
 
   />
 
-  <hal
-       HulaEnable="false"
-       HulaSensorMask="0F"
-       HulaLog="false"
-       HulaMoEnable="true"
-       HulaTurnEnable="true"
-       HulaRawAcclGyroEnable="true"
+  <hal 
+    HulaEnable="false"
+    HulaSensorMask="0F"
+    HulaLog="false"
+    HulaMoEnable="true" 
+    HulaTurnEnable="true"
+    HulaRawAcclGyroEnable="true"
   />
+
   <gll 
        LogPriMask="LOG_DEBUG"
        LogFacMask="LOG_DEFAULT"

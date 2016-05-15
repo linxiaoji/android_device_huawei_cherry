@@ -93,7 +93,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.interface=wlan0 \
         wifi.supplicant_scan_interval=15
 PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+        $(LOCAL_PATH)/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+	$(LOCAL_PATH)/wifi/hostapd_hisi.conf:system/etc/wifi/hostapd_hisi.conf \
+	$(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+	$(LOCAL_PATH)/bluetooth/auto_pair_devlist.conf:system/etc/bluetooth/auto_pair_devlist.conf \
+	$(LOCAL_PATH)/bluetooth/bt_did.conf:system/etc/bluetooth/bt_did.conf \
+	$(LOCAL_PATH)/bluetooth/bt_stack.conf:system/etc/bluetooth/bt_stack.conf \
+	$(LOCAL_PATH)/bluetooth/bt_stack_log.conf:system/etc/bluetooth/bt_stack_log.conf \
+	$(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
         
 # Permissions 
 PRODUCT_COPY_FILES += $(call add-to-product-copy-files-if-exists,\
@@ -197,7 +204,8 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/cpu_thermal/powermonitor_config.xml:system/etc/powermonitor_config.xml \
 	$(LOCAL_PATH)/cpu_thermal/pwrprof.xml:system/etc/pwrprof.xml \
 	$(LOCAL_PATH)/cpu_thermal/thermald.xml:system/etc/thermald.xml \
-	$(LOCAL_PATH)/cpu_thermal/thermald_performance.xml:system/etc/thermald_performance.xml
+	$(LOCAL_PATH)/cpu_thermal/thermald_performance.xml:system/etc/thermald_performance.xml \
+	$(LOCAL_PATH)/cpu_thermal/core4_sys_load_policy.xml:system/etc/core4_sys_load_policy.xml
 
 # Copy Media Profiles and Configurations
 PRODUCT_COPY_FILES += \
