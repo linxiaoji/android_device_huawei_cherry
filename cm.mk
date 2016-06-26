@@ -13,16 +13,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
+# Inherit some common CM stuff
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/huawei/cherry/device.mk)
+$(call inherit-product, device/huawei/cherryplus/cherryplus.mk)
 
-PRODUCT_DEVICE := cherry
-PRODUCT_NAME := cherry
-PRODUCT_BRAND := honor
-PRODUCT_MODEL := CHM-U01
+# Correct boot animation size for the screen
+DEVICE_SCREEN_HEIGHT := 1280
+DEVICE_SCREEN_WIDTH := 720
+
+PRODUCT_RELEASE_NAME := cherryplus
+# Device name
+PRODUCT_NAME := cm_cherryplus
+PRODUCT_DEVICE := cherryplus
+PRODUCT_BRAND := Honor
+PRODUCT_MODEL := Honor 4X
 PRODUCT_MANUFACTURER := HUAWEI
